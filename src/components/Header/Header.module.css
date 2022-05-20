@@ -1,0 +1,52 @@
+.header {
+  width: 100%;
+  background-color: #101010;
+  padding: 15px 0;
+}
+
+.flexContainer {
+  composes: container from '../App/App.module.css';
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Alegreya Sans SC', Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+  top: 5px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navigation {
+  display: flex;
+  gap: 12px;
+}
+
+.button {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  color: black;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background-color: white;
+  padding: 11.5px 40.5px;
+}
+
+.button:last-of-type {
+  padding: 11.5px 57.5px;
+}

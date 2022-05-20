@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  max-width: 370px;
+}
+
+.title {
+  composes: title from '../TiketBuyers/TiketBuyers.module.css';
+  padding-bottom: 16px;
+}
+
+.textContainer {
+  padding-left: 41px;
+  height: 215px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.textContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 2px;
+  background-color: #0D1E4B;
+  opacity: .2;
+}
+
+.textContainer::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -3px;
+  transform: translateY(-50%);
+  height: 56.45px;
+  width: 8px;
+  background-color: #0D1E4B;
+}
+
+.titleText {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 0;
+}
+
+.text {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: #939393;
+  margin: 0;
+}

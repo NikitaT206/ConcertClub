@@ -1,0 +1,24 @@
+.borderContainer {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.container {
+  composes: container from '../App/App.module.css';
+  padding: 15px 0 32px 0;
+}
+
+.title {
+  composes: title from '../TiketBuyers/TiketBuyers.module.css';
+  padding-bottom: 14.5px;
+}
+
+.list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 19px;
+}

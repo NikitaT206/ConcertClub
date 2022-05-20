@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  font-weight: 700;
+  src: url(../fonts/AlegreyaSansSC-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Alegreya Sans SC';
+  font-weight: 500;
+  src: url(../fonts/AlegreyaSansSC-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  src: url(../fonts/open-sans-bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  src: url(../fonts/open-sans-semibold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-weight: 600;
+  src: url(../fonts/ProximaNova-Semibold.ttf) format('truetype');
+}

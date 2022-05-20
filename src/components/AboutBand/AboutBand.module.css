@@ -1,0 +1,20 @@
+.container {
+  composes: container from '../App/App.module.css';
+  display: flex;
+  gap: 28px;
+}
+
+.title {
+  composes: title from '../TiketBuyers/TiketBuyers.module.css';
+  min-width: max-content;
+}
+
+.text {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+  color: #939393;
+  padding-top: 8px;
+}

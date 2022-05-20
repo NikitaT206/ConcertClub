@@ -1,0 +1,10 @@
+.section {
+  padding: 31px 0 38px 0;
+}
+
+.flexContainer {
+  composes: container from '../App/App.module.css';
+  display: flex;
+  justify-content: space-between;
+  padding: 47px 0 53px 0;
+}

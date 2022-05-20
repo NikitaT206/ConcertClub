@@ -1,0 +1,61 @@
+.container {
+  padding-bottom: 25px;
+}
+
+.borderContainer {
+  border-bottom: 1px solid black;
+}
+
+.name {
+  composes: container from '../App/App.module.css';
+  padding: 11px 18px 13px 18px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  box-sizing: border-box;
+  font-family: 'Alegreya Sans SC', Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.flexContainer {
+  composes: container from '../App/App.module.css';
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 188px 190px 200px 176px 1fr;
+  grid-template-rows: 43px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid black;
+  box-sizing: border-box;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 17px;
+  margin: 0;
+}
+
+.button {
+  width: 100%;
+  border: none;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
+  background-color: #101010;
+  color: white;
+  padding: 0;
+}
+
+.button:last-of-type {
+  margin-left: 1px;
+}
