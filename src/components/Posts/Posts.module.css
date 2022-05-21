@@ -14,11 +14,25 @@
 }
 
 .list {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   list-style-type: none;
   padding: 0;
   margin: 0;
   flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 19px;
+  gap: 19px;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
+  background-color: #101010;
+  color: white;
+  padding: 0;
 }

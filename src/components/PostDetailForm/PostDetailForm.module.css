@@ -1,0 +1,91 @@
+.formContainer {
+  position: fixed;
+  background-color: white;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  min-width: none;
+  width: 89.2%;
+  max-width: 995px;
+  box-sizing: border-box;
+  padding: 20px 0 30px;
+  transition: 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button {
+  composes: button from '../TiketBuyer/TiketBuyer.module.css';
+  border: none;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-self: flex-end;
+}
+
+.form {
+  overflow: hidden;
+  height: 100px;
+  transition: height .5s ease-in-out, opacity 1s ease-in-out;
+  /* margin: 10px 0 20px 0; */
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  opacity: 1;
+}
+
+.formHide {
+  transition: height .6s ease-in-out, opacity .3s ease-in-out;
+  composes: form;
+  height: 0;
+  opacity: 0;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 40%;
+  gap: 5px;
+}
+
+.input {
+  border: 1px solid black;
+  outline: none;
+  padding: 14px 20px;
+}
+
+.input::placeholder {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.textArea {
+  border: 1px solid black;
+  resize: none;
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  outline: none;
+}
+
+.textArea::placeholder {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.submitButton {
+  composes: button from '../TiketBuyer/TiketBuyer.module.css';
+  border: none;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}

@@ -1,0 +1,38 @@
+.container {
+  border: 1px solid black;
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.userInfo {
+  padding: 10px;
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-basis: 20%;
+  min-width: 20%;
+}
+
+.name {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.email {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.41);
+  word-break: break-all;
+}
+
+.text {
+  margin: 0;
+  padding: 10px;
+  flex: 0 1 80%;
+  /* flex-basis: 80%; */
+}

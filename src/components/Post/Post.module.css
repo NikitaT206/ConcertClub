@@ -2,9 +2,9 @@
   border: 1px solid black;
   padding: 12px 23px 17px 35px;
   width: 100%;
-  max-width: 490px;
-  max-height: 143px;
+  height: 100%;
   box-sizing: border-box;
+  transition: .2s ease-in-out;
 }
 
 .flexContainer {
@@ -35,6 +35,9 @@
   line-height: 17px;
   color: rgba(0, 0, 0, 0.41);
   width: 100%;
-  max-width: 421px;
   margin: 0;
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

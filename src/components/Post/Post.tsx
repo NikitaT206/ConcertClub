@@ -1,13 +1,20 @@
+import { Key } from 'readline';
+import { UserPost } from '../../types/posts'
 import postStyles from './Post.module.css'
+import { date } from '../../utils/constants';
+import { useActions } from '../../hooks/useActions';
 
-export default function Post() {
+export default function Post(props: {post: UserPost, key: Key}) {
+
+  const {setPost} = useActions()
+  
   return (
-    <li className={postStyles.container}>
+    <li className={postStyles.container} onClick={() => setPost(props.post)}>
       <div className={postStyles.flexContainer}>
-        <h4 className={postStyles.title}>Twenty One Pilots</h4>
-        <span className={postStyles.date}>12.01.22</span>
+        <h4 className={postStyles.title}>{props.post.title}</h4>
+        <span className={postStyles.date}>{date}</span>
       </div>
-      <p className={postStyles.text}>Просто шикарный альбом, Пилоты после Blurryface решили не идти проторенной дорожкой, и сделали что то новое. На мой взгляд у них на 100% получилось, альбом слушается на одном дыхании, каждая песня чем то запоминается, естественно нужно понимать тексты, чтобы вникнуть до конца во весь сюжет и атмосферу альбома.... </p>
-    </li>
+      <p className={postStyles.text}>{props.post.body}</p>
+    </li>  
   )
 }

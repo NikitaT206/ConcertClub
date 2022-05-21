@@ -1,9 +1,10 @@
+import { useTypedSelector } from '../../hooks/useTypedSelector'
 import TiketBuyer from '../TiketBuyer/TiketBuyer'
 import tiketBuyersStyles from './TiketBuyers.module.css'
 
-const arr = [...new Array(5).fill(0)]
-
 export default function TiketBuyers() {
+  const users = useTypedSelector(state => state.users.users)
+
   return (
     <div className={tiketBuyersStyles.container}>
 
@@ -11,14 +12,14 @@ export default function TiketBuyers() {
         <h3 className={tiketBuyersStyles.title}>Купили билеты</h3>
 
         <div className={tiketBuyersStyles.ammountContainer}>
-          <span className={tiketBuyersStyles.ammountBlack}>932/ </span>
-          <span className={tiketBuyersStyles.totalAmmount}>1000</span>
+          <span className={tiketBuyersStyles.ammountBlack}>1/ </span>
+          <span className={tiketBuyersStyles.totalAmmount}>{users.length}</span>
         </div>
       </div>
 
       <ul className={tiketBuyersStyles.list}>
-        {arr.map((item, index) => {
-          return <TiketBuyer key={index}/>
+        {users && users.map((user, index) => {
+          return <TiketBuyer user={user} key={index}/>
         })}
       </ul>
 
