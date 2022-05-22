@@ -20,7 +20,7 @@
 }
 
 .textContainer {
-  composes: container from '../App/App.module.css';
+  composes: container from '../../index.module.css';
   padding: 37px 0 96px 0;
   box-sizing: border-box;
   color: white;
@@ -35,27 +35,22 @@
   line-height: 60px;
   margin: 0 auto;
   padding-bottom: 5px;
-  position: relative;
   z-index: 2;
-  width: max-content;
   background: radial-gradient(50% 50% at 50% 50%, #000000 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .date {
-  position: relative;
-  display: block;
   font-family: 'Alegreya Sans SC';
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   z-index: 2;
-  width: max-content;
   background: radial-gradient(50% 50% at 50% 50%, #000000 0%, rgba(0, 0, 0, 0) 100%);
   margin: 0 auto;
 }
 
 .slider {
-  composes: container from '../App/App.module.css';
+  composes: container from '../../index.module.css';
   display: flex;
   justify-content: space-between;
 }
@@ -66,9 +61,6 @@
   background-color: transparent;
   border: 1px solid white;
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
 }
 
@@ -86,9 +78,8 @@
 }
 
 .button {
-  composes: button from '../Header/Header.module.css';
-  padding-left: 59.5px;
-  padding-right: 59.5px;
+  composes: button from '../../index.module.css';
+  padding: 10.5px 59.5px;
 }
 
 .gradient {

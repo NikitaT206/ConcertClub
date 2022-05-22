@@ -13,8 +13,8 @@ export function getUsers() {
   }
 }
 
-export function setUser(user: User) {
+export function setCurrentUser(user: User) {
   return (dispatch: Dispatch<UsersActions>) => {
-    dispatch({type: UsersActionsTypes.SET_USER, payload: user})
+    dispatch({type: UsersActionsTypes.SET_CURRENT_USER, payload: user})
   }
 }

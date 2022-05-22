@@ -1,0 +1,54 @@
+@import url(./fonts/fonts.css);
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  width: 100%;
+  max-width: 89.07%;
+  margin: 0 auto;
+}
+
+.whiteButton {
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  border: none;
+  outline: none;
+  padding: 0;
+  color: black;
+  text-decoration: none;
+  background-color: white;  
+  cursor: pointer;
+}
+
+.blackButton {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 15px;
+  border: none;
+  outline: none;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+.sectionTitle {
+  font-family: 'Alegreya Sans SC';
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 40px;
+  margin: 0;
+}

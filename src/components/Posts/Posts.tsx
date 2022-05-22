@@ -3,18 +3,19 @@ import { useActions } from '../../hooks/useActions'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import Post from '../Post/Post'
 import postsStyles from './Posts.module.css'
+import { slicePostsNumber } from '../../utils/constants'
 
 export default function Posts() {
 
   const posts = useTypedSelector(state => state.posts.posts)
-  const user = useTypedSelector(state => state.users.user)
+  const user = useTypedSelector(state => state.users.currentUser)
   const filteredPosts = posts.filter(post => post.userId === user?.id)
   const {setUserPosts} = useActions()
   const userPosts = useTypedSelector(state => state.posts.userPosts)
 
   useEffect(() => {
-    setUserPosts(filteredPosts.slice(0, 3))
-  }, [])
+    setUserPosts(filteredPosts.slice(0, slicePostsNumber))
+  }, [user])
 
   function showAllUserPosts() {
     setUserPosts(filteredPosts)
@@ -28,7 +29,12 @@ export default function Posts() {
           {userPosts && userPosts.map((post) => {
             return <Post post={post} key={post.id}/>
           })}
-          {userPosts.length <= 3 && <button className={postsStyles.button} type='button' onClick={showAllUserPosts}>Показать все посты</button>}
+          {filteredPosts.length > 3 && userPosts.length === slicePostsNumber ?
+            <button 
+              className={postsStyles.button} 
+              type='button' 
+              onClick={showAllUserPosts}
+            >Показать все посты</button> : null}
         </ul>
       </div>
     </div>

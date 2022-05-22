@@ -24,12 +24,12 @@ export interface User {
 
 export interface UsersState {
   users: User[],
-  user: User | null
+  currentUser: User | null
 }
 
 export enum UsersActionsTypes {
   GET_USERS =  'GET_USERS',
-  SET_USER = 'SET_USER'
+  SET_CURRENT_USER = 'SET_CURRENT_USER'
 }
 
 interface UsersGetUsersAction {
@@ -37,9 +37,9 @@ interface UsersGetUsersAction {
   payload: User[]
 }
 
-interface UsersSetUserAction {
-  type: UsersActionsTypes.SET_USER,
+interface UsersSetCurrentUserAction {
+  type: UsersActionsTypes.SET_CURRENT_USER,
   payload: User
 }
 
-export type UsersActions = UsersGetUsersAction | UsersSetUserAction
+export type UsersActions = UsersGetUsersAction | UsersSetCurrentUserAction

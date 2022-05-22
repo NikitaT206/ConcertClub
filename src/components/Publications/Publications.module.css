@@ -1,10 +1,10 @@
 .container {
-  composes: container from '../App/App.module.css';
+  composes: container from '../../index.module.css';
   padding: 23px 0 0 0;
 }
 
 .title {
-  composes: title from '../TiketBuyers/TiketBuyers.module.css';
+  composes: sectionTitle from '../../index.module.css';
   padding-bottom: 20px;
 }
 

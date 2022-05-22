@@ -10,6 +10,7 @@
 .flexContainer {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   padding-bottom: 4px;
 }
 
@@ -36,7 +37,7 @@
   color: rgba(0, 0, 0, 0.41);
   width: 100%;
   margin: 0;
-  width: 200px;
+  width: 421px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

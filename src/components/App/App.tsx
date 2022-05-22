@@ -6,17 +6,14 @@ import { Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useActions } from '../../hooks/useActions';
 import PostDetail from '../PostDetail/PostDetail';
-import { useTypedSelector } from '../../hooks/useTypedSelector';
 
 function App() {
   const {getUsers, getPosts, getComments} = useActions()
-  const post = useTypedSelector(state => state.posts.post)
-  const user = useTypedSelector(state => state.users.user)
 
   useEffect(() => {
     getUsers()
-    getPosts()
     getComments()
+    getPosts()
   }, [])
 
   return (
@@ -24,8 +21,9 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<MainPage/>}/>
-        <Route path='/:name' element={<Profile/>}/>
-        <Route path='/:name/:id' element={<PostDetail/>}/>
+        <Route path='/users/:name' element={<Profile/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/users/:name/:id' element={<PostDetail/>}/>
       </Routes>
     </div>
   );

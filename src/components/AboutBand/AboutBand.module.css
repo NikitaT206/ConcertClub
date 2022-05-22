@@ -1,11 +1,11 @@
 .container {
-  composes: container from '../App/App.module.css';
+  composes: container from '../../index.module.css';
   display: flex;
   gap: 28px;
 }
 
 .title {
-  composes: title from '../TiketBuyers/TiketBuyers.module.css';
+  composes: sectionTitle from '../../index.module.css';
   min-width: max-content;
 }
 

@@ -29,8 +29,8 @@
   max-height: 134px;
   box-sizing: border-box;
   resize: none;
-  margin-bottom: 16px;
   outline: none;
+  margin-bottom: 16px;
 }
 
 .textArea::placeholder {
@@ -42,8 +42,8 @@
 }
 
 .button {
+  composes: blackButton from '../../index.module.css';
   align-self: flex-end;
-  border: none;
-  composes: button from '../TiketBuyer/TiketBuyer.module.css';
+  padding: 10px 20px;
 }
 

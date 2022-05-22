@@ -15,8 +15,9 @@ export default function PostDetail() {
         <h4 className={postDetailStyles.title}>{post?.title}</h4>
         <span className={postDetailStyles.date}>{date}</span>
       </div>
-
-      <p className={postDetailStyles.text}>{post?.body}</p>
+      <div className={postDetailStyles.textContainer}>
+        <p className={postDetailStyles.text}>{post?.body}</p>
+      </div>
 
       <PostDetailComments/>
 

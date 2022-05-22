@@ -3,7 +3,7 @@
 }
 
 .flexContainer {
-  composes: container from '../App/App.module.css';
+  composes: container from '../../index.module.css';
   display: flex;
   justify-content: space-between;
   padding: 47px 0 53px 0;

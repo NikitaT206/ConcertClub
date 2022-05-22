@@ -17,6 +17,10 @@
   line-height: 23px;
   margin: 0;
   padding-bottom: 4px;
+  width: 205px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .city {
@@ -26,20 +30,16 @@
   line-height: 17px;
   margin: 0;
   padding-bottom: 35px;
-  color: rgba(0, 0, 0, 0.41)
+  width: 205px;
+  color: rgba(0, 0, 0, 0.41);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .button {
-  cursor: pointer;
-  display: flex;
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 15px;
+  composes: blackButton from '../../index.module.css';
   padding: 10px 20px;
-  width: max-content;
-  box-sizing: border-box;
+  display: flex;
+  max-width: max-content;
 }

@@ -4,17 +4,14 @@
 }
 
 .title {
-  composes: title from '../TiketBuyers/TiketBuyers.module.css';
+  composes: sectionTitle from '../../index.module.css';
   padding-bottom: 16px;
 }
 
 .textContainer {
   padding-left: 41px;
   height: 215px;
-  overflow-y: scroll;
-  overflow-x: hidden;
   position: relative;
-  overflow: visible;
   display: flex;
   flex-direction: column;
   gap: 16px;

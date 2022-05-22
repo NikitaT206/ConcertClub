@@ -5,7 +5,7 @@
 }
 
 .flexContainer {
-  composes: container from '../App/App.module.css';
+  composes: container from '../../index.module.css';
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,21 +32,12 @@
   gap: 12px;
 }
 
-.button {
-  box-sizing: border-box;
-  cursor: pointer;
-  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 17px;
-  color: black;
-  text-decoration: none;
-  outline: none;
-  border: none;
-  background-color: white;
-  padding: 11.5px 40.5px;
+.profileButton {
+  composes: whiteButton from '../../index.module.css';
+  padding: 11.5px 57px;
 }
 
-.button:last-of-type {
-  padding: 11.5px 57.5px;
+.vButton {
+  composes: whiteButton from '../../index.module.css';
+  padding: 11.5px 40.5px;
 }

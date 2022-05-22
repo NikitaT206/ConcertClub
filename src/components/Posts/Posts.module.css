@@ -4,12 +4,12 @@
 }
 
 .container {
-  composes: container from '../App/App.module.css';
+  composes: container from '../../index.module.css';
   padding: 15px 0 32px 0;
 }
 
 .title {
-  composes: title from '../TiketBuyers/TiketBuyers.module.css';
+  composes: sectionTitle from '../../index.module.css';
   padding-bottom: 14.5px;
 }
 
@@ -19,20 +19,12 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  flex-wrap: wrap;
   gap: 19px;
 }
 
 .button {
-  cursor: pointer;
-  border: none;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 15px;
-  letter-spacing: 0em;
-  text-align: center;
-  background-color: #101010;
-  color: white;
-  padding: 0;
+  composes: blackButton from '../../index.module.css';
+  font-size: 20px;
+  align-self: center;
+  padding: 15px 0;
 }
