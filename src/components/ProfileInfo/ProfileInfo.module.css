@@ -51,6 +51,7 @@
 .button {
   composes: blackButton from '../../index.module.css';
   flex: 1 1 auto;
+  padding: 0 20px;
 }
 
 .button:last-of-type {

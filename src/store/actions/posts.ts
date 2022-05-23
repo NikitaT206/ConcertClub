@@ -19,6 +19,12 @@ export function setUserPosts(posts: UserPost[]) {
   }
 }
 
+export function erasePosts() {
+  return (dispatch: Dispatch<PostsActions>) => {
+    dispatch({type: PostsActionTypes.ERASE_POSTS})
+  }
+}
+
 export function setUserPublications(posts: UserPost[]) {
   return (dispatch: Dispatch<PostsActions>) => {
     dispatch({type: PostsActionTypes.SET_USER_PUBLICATIONS, payload: posts})

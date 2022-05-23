@@ -78,7 +78,7 @@
 }
 
 .button {
-  composes: button from '../../index.module.css';
+  composes: whiteButton from '../../index.module.css';
   padding: 10.5px 59.5px;
 }
 

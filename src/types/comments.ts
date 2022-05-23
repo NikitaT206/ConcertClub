@@ -24,7 +24,8 @@ export enum CommentsActionTypes {
   GET_COMMENTS = 'GET_COMMENTS',
   SET_POST_COMMENTS = 'SET_POST_COMMENTS',
   SET_SHOW_COMMENT_FORM = 'SET_SHOW_COMMENT_FORM',
-  LEAVE_COMMENT = 'LEAVE_COMMENT'
+  LEAVE_COMMENT = 'LEAVE_COMMENT',
+  ERASE_COMMENTS = 'ERASE_COMMENTS'
 }
 
 interface CommentsGetCommentsAction {
@@ -41,9 +42,13 @@ interface CommentsSetShowCommentFormAction {
   type: CommentsActionTypes.SET_SHOW_COMMENT_FORM,
 }
 
+interface CommentsEraseCommentsAction {
+  type: CommentsActionTypes.ERASE_COMMENTS,
+}
+
 interface CommentsLeaveCommentAction {
   type: CommentsActionTypes.LEAVE_COMMENT,
   payload: PostComment
 }
 
-export type CommentsActions = CommentsGetCommentsAction | CommentsSetPostCommentsAction | CommentsSetShowCommentFormAction | CommentsLeaveCommentAction
+export type CommentsActions = CommentsGetCommentsAction | CommentsSetPostCommentsAction | CommentsSetShowCommentFormAction | CommentsLeaveCommentAction | CommentsEraseCommentsAction

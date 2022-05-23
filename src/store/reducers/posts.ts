@@ -4,7 +4,7 @@ const defaultState: PostsState = {
   posts: [],
   userPosts: [],
   userPublications: [],
-  post: null
+  post: null,
 }
 
 export const postsReducer = (state = defaultState, action: PostsActions) => {
@@ -13,6 +13,8 @@ export const postsReducer = (state = defaultState, action: PostsActions) => {
       return {...state, posts: action.payload}
     case PostsActionTypes.SET_USER_POSTS:
       return {...state, userPosts: action.payload}
+    case PostsActionTypes.ERASE_POSTS:
+      return {...state, posts: [], userPosts: []}
     case PostsActionTypes.SET_USER_PUBLICATIONS:
       return {...state, userPublications: action.payload}
     case PostsActionTypes.SET_POST:

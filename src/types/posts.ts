@@ -19,6 +19,7 @@ export enum PostsActionTypes {
   SET_USER_POSTS  = 'SET_USER_POSTS',
   SET_USER_PUBLICATIONS = 'SHOW_ALL_USER_POSTS',
   SET_POST = 'SET_POST',
+  ERASE_POSTS = 'ERASE_POSTS'
 }
 
 interface PostsGetPostsAction {
@@ -41,4 +42,8 @@ interface PostsSetPostAction {
   payload: UserPost
 }
 
-export type PostsActions = PostsGetPostsAction | PostsSetPostAction | PostsSetUserPostsAction | PostsSetUserPublicationsAction
+interface PostsErasePostsAction {
+  type: PostsActionTypes.ERASE_POSTS
+}
+
+export type PostsActions = PostsGetPostsAction | PostsSetPostAction | PostsSetUserPostsAction | PostsSetUserPublicationsAction | PostsErasePostsAction

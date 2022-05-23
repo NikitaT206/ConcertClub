@@ -9,18 +9,13 @@ export default function Posts() {
 
   const posts = useTypedSelector(state => state.posts.posts)
   const userPosts = useTypedSelector(state => state.posts.userPosts)
-  const user = useTypedSelector(state => state.users.currentUser)
-  const {setUserPosts, getPosts} = useActions()
+  const {setUserPosts} = useActions()
 
   useEffect(() => {
-    getPosts(user?.id)
-  }, [user])
-
-  useEffect(() => {
-    if (posts.length) {
+    if(posts.length) {
       setUserPosts(posts.slice(0, slicePostsNumber))
     }
-  }, [posts])
+  }, [posts.length])
 
   function showAllUserPosts() {
     setUserPosts(posts)

@@ -31,6 +31,12 @@ export function setPostComments(comments: PostComment[]) {
   }
 }
 
+export function eraseComments() {
+  return (dispatch: Dispatch<CommentsActions>) => {
+    dispatch({type: CommentsActionTypes.ERASE_COMMENTS})
+  }
+}
+
 export function setShowCommentForm() {
   return (dispatch: Dispatch<CommentsActions>) => {
     dispatch({type: CommentsActionTypes.SET_SHOW_COMMENT_FORM})

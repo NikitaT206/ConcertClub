@@ -4,11 +4,13 @@ import { User } from '../../types/users'
 import tiketBuyerStyles from './TiketBuyer.module.css'
 
 export default function TiketBuyer(props: {user: User}) {
-  const {setCurrentUser} = useActions()
+  const {setCurrentUser, getPosts, erasePosts, setUserPublications} = useActions()
 
   function setCurrentUserHandler() {
+    erasePosts()
+    setUserPublications([])
     setCurrentUser(props.user)
-    localStorage.setItem('currentUser', JSON.stringify(props.user))
+    getPosts(props.user.id)
   }
 
   return (

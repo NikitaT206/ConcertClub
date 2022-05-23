@@ -4,11 +4,14 @@ import { userMe } from '../../utils/constants'
 import { useActions } from '../../hooks/useActions'
 
 export default function Header() {
-  const {setCurrentUser} = useActions()
+
+  const {setCurrentUser, getPosts, erasePosts, setUserPublications} = useActions()
 
   function setCurrentUserHandler() {
+    erasePosts()
+    setUserPublications([])
     setCurrentUser(userMe)
-    localStorage.setItem('currentUser', JSON.stringify(userMe))
+    getPosts(userMe.id)
   }
 
   return (
