@@ -6,7 +6,7 @@ import publicationStyles from './Publication.module.css'
 
 export default function Publication(props: {post: UserPost}) {
   const user = useTypedSelector(state => state.users.currentUser)
-  const {setPost, setPostComments, getComments, eraseComments} = useActions()
+  const {setPost, getComments, eraseComments} = useActions()
 
   function setPostHandler() {
     eraseComments()

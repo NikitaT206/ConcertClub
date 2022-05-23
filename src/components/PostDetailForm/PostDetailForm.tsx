@@ -22,6 +22,7 @@ export default function PostDetailForm(props: InjectedFormProps<LeaveComment>) {
             component={'input'} 
             className={postDetailFormStyles.input} 
             placeholder='Ваше имя' 
+            type={'text'}
             required 
             min={2}
             max={20}
@@ -31,6 +32,7 @@ export default function PostDetailForm(props: InjectedFormProps<LeaveComment>) {
             component={'input'} 
             className={postDetailFormStyles.input} 
             placeholder='Ваш email'
+            type={'email'}
             required
             min={2}
             max={30}
@@ -41,6 +43,7 @@ export default function PostDetailForm(props: InjectedFormProps<LeaveComment>) {
           component={'textarea'} 
           className={postDetailFormStyles.textArea} 
           placeholder='Текст комментария'
+          type={'text'}
           required
           min={2}
         />
