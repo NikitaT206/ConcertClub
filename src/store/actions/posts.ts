@@ -2,10 +2,10 @@ import { Dispatch } from 'redux'
 import { UserPost, PostsActionTypes, PostsActions } from '../../types/posts'
 import { fetchPosts } from '../../utils/api'
 
-export function getPosts() {
+export function getPosts(userId: Number | undefined) {
   return async (dispatch: Dispatch<PostsActions>) => {
     try {
-      const data = await fetchPosts()
+      const data = await fetchPosts(userId)
       dispatch({ type: PostsActionTypes.GET_POSTS, payload: data })
     } catch (err) {
       return await Promise.reject(err)

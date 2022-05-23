@@ -8,6 +8,12 @@ export interface PostComment {
   body: String,
 }
 
+export interface LeaveComment {
+  name: String,
+  email: String,
+  body: String,
+}
+
 export interface Comments {
   comments: PostComment[],
   postComments: PostComment[],
@@ -17,7 +23,8 @@ export interface Comments {
 export enum CommentsActionTypes {
   GET_COMMENTS = 'GET_COMMENTS',
   SET_POST_COMMENTS = 'SET_POST_COMMENTS',
-  SET_SHOW_COMMENT_FORM = 'SET_SHOW_COMMENT_FORM'
+  SET_SHOW_COMMENT_FORM = 'SET_SHOW_COMMENT_FORM',
+  LEAVE_COMMENT = 'LEAVE_COMMENT'
 }
 
 interface CommentsGetCommentsAction {
@@ -34,4 +41,9 @@ interface CommentsSetShowCommentFormAction {
   type: CommentsActionTypes.SET_SHOW_COMMENT_FORM,
 }
 
-export type CommentsActions = CommentsGetCommentsAction | CommentsSetPostCommentsAction | CommentsSetShowCommentFormAction
+interface CommentsLeaveCommentAction {
+  type: CommentsActionTypes.LEAVE_COMMENT,
+  payload: PostComment
+}
+
+export type CommentsActions = CommentsGetCommentsAction | CommentsSetPostCommentsAction | CommentsSetShowCommentFormAction | CommentsLeaveCommentAction

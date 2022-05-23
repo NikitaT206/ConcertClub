@@ -9,12 +9,28 @@ export async function fetchUsers() {
   return checkReponse(res)
 }
 
-export async function fetchPosts() {
-  const res = await fetch(URL + 'posts')
+export async function fetchPosts(userId) {
+  const res = await fetch(URL + `posts?userId=${userId}`)
   return checkReponse(res)
 }
 
-export async function fetchComments() {
-  const res = await fetch(URL + 'comments')
+export async function fetchComments(postId) {
+  const res = await fetch(URL + `posts/${postId}/comments`)
+  return checkReponse(res)
+}
+
+export async function postComment(postId, data) {
+  const res = await fetch(URL + `posts/${postId}/comments`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      name: data.name,
+      email: data.email,
+      body: data.body,
+      postId: postId
+    })
+  })
   return checkReponse(res)
 }

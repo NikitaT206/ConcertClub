@@ -7,14 +7,14 @@ import publicationsStyles from './Publications.module.css'
 export default function Publications() {
 
   const posts = useTypedSelector(state => state.posts.posts)
-  const user = useTypedSelector(state => state.users.currentUser)
   const userPublications = useTypedSelector(state => state.posts.userPublications)
-  const filteredPosts = posts.filter(post => post.userId === user?.id)
   const {setUserPublications} = useActions()
 
   useEffect(() => {
-    setUserPublications(filteredPosts)
-  }, [user])
+    if (posts) {
+      setUserPublications(posts)
+    }
+  }, [posts])
 
   return (
     <div className={publicationsStyles.container}>

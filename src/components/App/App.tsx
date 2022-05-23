@@ -8,12 +8,10 @@ import { useActions } from '../../hooks/useActions';
 import PostDetail from '../PostDetail/PostDetail';
 
 function App() {
-  const {getUsers, getPosts, getComments} = useActions()
+  const {getUsers} = useActions()
 
   useEffect(() => {
     getUsers()
-    getComments()
-    getPosts()
   }, [])
 
   return (

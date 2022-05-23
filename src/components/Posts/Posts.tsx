@@ -8,17 +8,22 @@ import { slicePostsNumber } from '../../utils/constants'
 export default function Posts() {
 
   const posts = useTypedSelector(state => state.posts.posts)
-  const user = useTypedSelector(state => state.users.currentUser)
-  const filteredPosts = posts.filter(post => post.userId === user?.id)
-  const {setUserPosts} = useActions()
   const userPosts = useTypedSelector(state => state.posts.userPosts)
+  const user = useTypedSelector(state => state.users.currentUser)
+  const {setUserPosts, getPosts} = useActions()
 
   useEffect(() => {
-    setUserPosts(filteredPosts.slice(0, slicePostsNumber))
+    getPosts(user?.id)
   }, [user])
 
+  useEffect(() => {
+    if (posts.length) {
+      setUserPosts(posts.slice(0, slicePostsNumber))
+    }
+  }, [posts])
+
   function showAllUserPosts() {
-    setUserPosts(filteredPosts)
+    setUserPosts(posts)
   }
   
   return (
@@ -29,7 +34,7 @@ export default function Posts() {
           {userPosts && userPosts.map((post) => {
             return <Post post={post} key={post.id}/>
           })}
-          {filteredPosts.length > 3 && userPosts.length === slicePostsNumber ?
+          {posts.length > 3 && userPosts.length === slicePostsNumber ?
             <button 
               className={postsStyles.button} 
               type='button' 

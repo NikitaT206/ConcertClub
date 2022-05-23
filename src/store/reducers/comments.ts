@@ -3,7 +3,7 @@ import { Comments, CommentsActions, CommentsActionTypes } from '../../types/comm
 const defaultState: Comments = {
   comments: [],
   postComments: [],
-  showCommentForm: false
+  showCommentForm: false,
 }
 
 export const commentsReducer = (state = defaultState, action: CommentsActions) => {
@@ -14,6 +14,8 @@ export const commentsReducer = (state = defaultState, action: CommentsActions) =
       return {...state, postComments: action.payload}
     case CommentsActionTypes.SET_SHOW_COMMENT_FORM:
       return {...state, showCommentForm: !state.showCommentForm}
+    case CommentsActionTypes.LEAVE_COMMENT:
+      return {...state, comments: [...state.comments, action.payload]}
     default:
       return state
   }
